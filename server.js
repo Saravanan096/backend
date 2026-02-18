@@ -13,7 +13,10 @@ const authRouter = require("./routes/authRouter");
 const app = express();
 
 /* ================= MIDDLEWARE ================= */
-app.use(cors());
+app.use(cors({
+  origin: "https://fus-secure.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 /* ================= MONGODB ATLAS ================= */
